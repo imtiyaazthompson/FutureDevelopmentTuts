@@ -3,7 +3,7 @@ Coding tutorials for future endeavours
 
 # Goals
 + Learn the Elixir programming language for web development with phoenix
-+ Learn full stack web development
++ Learn full stack web development and X platform mobile app development using cordova
 + Learn SQL Database here: https://alison.com/courses/diploma-in-databases-and-t-sql-revised/content#event=login
 
 # Outcomes
