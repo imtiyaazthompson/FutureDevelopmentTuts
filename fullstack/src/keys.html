@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Key listener</title>
+  </head>
+  <body>
+    <p id=show_key></p>
+  </body>
+  <script>
+    // DOM completely loads
+    document.addEventListener('DOMContentLoaded', () => {
+      'use strict';
+
+      // Pass in event into callback to capture the key pressed
+      document.addEventListener('keydown', (event) => {
+        document.getElementById('show_key').innerHTML = "Pressed: " + event.key;
+      })
+    })
+  </script>
+</html>
