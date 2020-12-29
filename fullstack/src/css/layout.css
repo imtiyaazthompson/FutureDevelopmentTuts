@@ -1,0 +1,39 @@
+body {
+  color: black;
+}
+
+.box {
+  background-color: orange;
+  height: 100px;
+  width: 100px;
+}
+
+.border-box-float {
+  border: 5px solid orange;
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.border-box {
+  border: 5px solid orange;
+  width: 100px;
+  height: 100px;
+}
+
+.left-spacing {
+  margin-left: 200px;
+}
+
+.vertical-padding {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.clearfix::after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
