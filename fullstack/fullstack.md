@@ -942,3 +942,74 @@ truncate table <TABLE_NAME>;
 ## Running Queries
 + All: `CTRL + SHIFT + ENTER`
 + Current Line: `CTRL + ENTER`
+
+### Unique constraints
++ add a unique constraint
++ `constraint_name` can be whatever value you choose, similar to an identifier
+```mysql
+
+  alter table <TABLE_NAME>
+  add constraint <CONSTR_NAME> unique (<COL_NAME>)
+
+```
++ remove a unique constraint from a column
+```mysql
+
+ alter table <TABLE_NAME>
+ drop index <CONSTR_NAME>;
+
+```
++ A column with a unique constraint applied to it will not accept any duplicate values of data within that column
+
+
+### Changing a column name
+```mysql
+
+  alter table <TABLE_NAME> change `<OLD_COL_NAME>` `<NEW_COL_NAME>` <DATA_TYPE>;
+
+```
+
+### Changing column data type
+```mysql
+
+  alter table <TABLE_NAME> modify <COL_NAME> <DATA_TYPE>;
+
+```
+
+## Inserting data into a table
+```mysql
+
+  insert into <TABLE_NAME> (<COL_1>,<COL_2>,...)
+  values ('value1','value2',...),(value1,value2,...);
+
+```
++ `values` are inputted except for the `id` field of a table
++ Comma separated value fields
+
+## Updating data in tables
+```mysql
+
+  update <TABLE_NAME>
+  set <COL_NAME> = 'value',<COL_NAME_2> = 'value', . . .
+  where <COL_NAME> = 'value';
+
+```
++ `set` the new value
++ `where` the value to be updated is (column name)
++ Only allowed to use the `pk` column in the `where` statement when you are updating data, since `safe updates` are enabled
++ To change this
+```mysql
+
+  set SQL_SAFE_UPDATES=0;
+
+```
++ Multiple rows can be updated if the `where` clauses matches columns that have the same value
+
+## Deleting data in a table
+```mysql
+
+  delete from <TABLE_NAME>
+  where <COL_NAME> = 'value';
+
+```
++ Can delete multiple rows depending on the `<COL_NAME>` selected
